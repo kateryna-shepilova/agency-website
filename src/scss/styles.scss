@@ -141,10 +141,118 @@ body {
 	}
 }
 
+.pricing{
+	display: flex;
+	flex-wrap: wrap;
+	position: relative;
+	padding: 0 0 30px;
+	&::after{
+		content: ('');
+		background-color: #f1f1f1;
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 50%;
+		transform: translate(-50%);
+		width: 100vw;
+		z-index: -1;	
+	}
+	@media (min-width:768px) {
+		padding: 120px 0;
+		flex-wrap: nowrap;
+		justify-content: space-between;
+	}
+	.basic, .pro, .premium{
+		width: 100%;
+		background-color: #f8f9fb;
+		text-align: center;
+		margin: 30px 0 0;
+		@media (min-width:768px) {
+			width: 33.333%;
+			margin: 0 30px 0 0;
+		}
+	}
+	h3{
+		margin: 0;
+		padding: 15px 0;
+		font-size: 14px;
+		color: $white;
+		font-weight: 400;
+		@media (min-width:576px) {
+			font-size: 18px;
+			padding: 20px 0;
+		}
+		@media (min-width:768px) {
+			padding: 25px 0;
+			font-size: 22px;
+		}
+	}
+	.basic h3, .premium h3{
+		background-color: $darkblue;
+		
+	}
+	.pro h3{
+		background-color: $blue;
+	}
+	.price{
+		font-size: 14px;
+		color: #4e525d;
+		margin: 0;
+		padding: 15px 0;
+		@media (min-width:576px) {
+			font-size: 18px;
+			padding: 20px 0;
+		}
+		@media (min-width:768px) {
+			padding: 25px 0;
+			font-size: 22px;
+		}
+	}
+	ul{
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+		li{
+			font-size: 12px;
+			padding: 15px 0;
+			color: #b3b7bb;
+			background-color: $white;
+			border-top: 1px solid #f1f4f4;
+		&:last-child{
+				border-bottom: 1px solid #f1f4f4;
+			}
+		}
+	}
+	.pricing-btn{
+		margin: 20px 0;
+		padding: 10px 30px;
+		color: $white;
+		font-size: 13px;
+		font-weight: 700;
+		border: none;
+		background-color: $gray;
+		border-radius: 5px;
+		&:active{
+			background-color: $blue;
+		}
+		@media (min-width:576px) {
+			font-size: 17px;
+			padding: 15px 40px;
+			
+		}
+		@media (min-width:768px) {
+			font-size: 20px;
+			padding: 15px 50px;
+			margin: 30px 0;
+		}
+	}
+}
 
 .feedback{
 	text-align: center;
+	padding: 150px 0 100px;
 	h2{
+		margin: 0;
 		font-size: 32px;
 		font-weight: 400;
 		color: #4e525d;
@@ -155,7 +263,7 @@ body {
 	.feedback-item p{
 		font-size: 14px;
 		color: #4e525d;
-		margin: 0 auto;
+		margin: 30px auto;
 		@media (min-width:576px) {
 			font-size: 16px;
 		}
@@ -167,10 +275,8 @@ body {
 	.feedback-item p ~ p{
 		font-size: 18px;
 		color: #9a8faf;
-		margin-top: 30px;
 		@media (min-width:768px) {
 			font-size: 21px;
-			margin-top: 50px;
 		}
 	}
 	.slider-feedback{
