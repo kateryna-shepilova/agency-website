@@ -1,0 +1,36 @@
+$blue: #49cbcd;
+$darkgray: #484c55;
+$gray: #788492;
+$lightgray: #f1f1f1;
+$darkblue: #485460;
+$white: #fff;
+$pink: #f46d6d;
+
+* {
+	box-sizing: border-box;
+}
+
+body, html {
+	height: 100%;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+	font-size: 14px;
+	font-style: normal;
+	font-weight: 400;
+}
+
+.container{
+	min-width: 1200px;
+	width: 100%;
+	padding: 0 15px;
+}
+
+.page-holder {
+	min-height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	overflow: hidden;
+}
