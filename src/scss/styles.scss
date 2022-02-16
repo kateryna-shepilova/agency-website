@@ -187,6 +187,11 @@ body {
 				@media (min-width: 768px) {
 					margin: 0 auto 40px;
 				}
+				@media (min-width: 992px) {
+					&:hover{
+						cursor: url('https://img.icons8.com/emoji/48/000000/plus-emoji.png') 4 30, crosshair;
+					}
+				}
 				@media (min-width: 1200px) {
 					margin: 0 auto 70px;
 				}
@@ -388,5 +393,27 @@ body {
 			border-left: 1px solid #49cbcd;
 			border-bottom: 1px solid #49cbcd;
 		}
+	}
+}
+
+.lg-toolbar .lg-icon{
+	font-size: 45px;
+}
+
+.lg-toolbar .lg-close::after{
+	content: "\2573";
+}
+
+#lg-download{
+	display: none;
+}
+
+.lg-actions {
+	font-size: 45px;
+	.lg-prev::after {
+	content: "\2190";
+	}
+	.lg-next::before {
+		content: "\2192";
 	}
 }

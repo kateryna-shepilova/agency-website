@@ -8,6 +8,8 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap"> 
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css">
+	<link rel="stylesheet" href="./css/lightgallery.min.css">
+	<link rel="stylesheet" href="./css/jquery.jqZoom.css">
 	<link rel="stylesheet" href="./css/styles.css">
 	<title>Author</title>
 </head>
@@ -24,34 +26,34 @@
 				<div class="container">
 					<div class="portfolio">
 						<h2 class="portfolio-title title">Portfolio</h2>
-						<ul class="portfolio-list">
-							<li class="portfolio-item">
+						<div class="portfolio-list" id="lightgallery">
+							<a href="./img/portfolio-img-1.jpg" class="portfolio-item">
 								<img src="./img/portfolio-img-1.jpg" alt="Mountains">
-							</li>
-							<li class="portfolio-item">
+							</a>
+							<a href="./img/portfolio-img-2.jpg" class="portfolio-item">
 								<img src="./img/portfolio-img-2.jpg" alt="Photographer holds camera">
-							</li>
-							<li class="portfolio-item">
+							</a>
+							<a href="./img/portfolio-img-3.jpg" class="portfolio-item">
 								<img src="./img/portfolio-img-3.jpg" alt="Red balls on the leaf">
-							</li>
-							<li class="portfolio-item">
+							</a>
+							<a href="./img/portfolio-img-4.jpg" class="portfolio-item">
 								<img src="./img/portfolio-img-4.jpg" alt="Gamepad">
-							</li>
-							<li class="portfolio-item">
+							</a>
+							<a href="./img/portfolio-img-5.jpg" class="portfolio-item">
 								<img src="./img/portfolio-img-5.jpg" alt="Big city and sea">
-							</li>
-							<li class="portfolio-item">
+							</a>
+							<a href="./img/portfolio-img-6.jpg" class="portfolio-item">
 								<img src="./img/portfolio-img-6.jpg" alt="Flowers">
-							</li>
-						</ul>
+							</a>
+						</div>
 						<a href="#" class="portfolio-btn btn">See all works</a>
 					</div>
 					<div class="team">
 						<div class="team-title title">The team</div>
 						<ul class="team-list">
 							<li class="team-item">
-								<div class="team-photo">
-									<img src="./img/team-img-1.png" alt="">
+								<div class="team-photo zoom-box">
+									<img class="team-img" src="./img/team-img-1.png" alt="">
 								</div>
 								<p class="team-name">Adrian Thomas</p>
 								<span class="team-position">CEO & Founder</span>
@@ -75,7 +77,7 @@
 							</li>
 							<li class="team-item">
 								<div class="team-photo">
-									<img src="./img/team-img-4.png" alt="">
+									<img class="team-img" src="./img/team-img-4.png" alt="">
 								</div>
 								<p class="team-name">Adedayo saheed</p>
 								<span class="team-position">Creative Director</span>
@@ -166,8 +168,10 @@
 			</div>
 		</footer>
 	</div>
-	<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+	<script src="./js/jquery.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.js"></script>
+	<script src="./js/lightgallery.min.js"></script>
+	<script src="./js/jquery.jqZoom.js"></script>
 	<script src="./js/app.js"></script>
 </body>
 
