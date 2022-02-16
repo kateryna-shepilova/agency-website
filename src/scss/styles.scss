@@ -10,18 +10,24 @@ $pink: #f46d6d;
 	box-sizing: border-box;
 }
 
-body, html {
+body,
+html {
 	height: 100%;
 }
 
 body {
-    font-family: 'Open Sans', sans-serif;
+	font-family: "Open Sans", sans-serif;
 	font-size: 14px;
 	font-style: normal;
 	font-weight: 400;
 }
-
-.container{
+.main {
+	margin-top: 100px;
+	@media (max-width: 767px) {
+		margin-top: 50px;
+	}
+}
+.container {
 	max-width: 1200px;
 	width: 100%;
 	padding: 0 15px;
@@ -36,40 +42,41 @@ body {
 	overflow: hidden;
 }
 
-.feedback{
+.feedback {
 	text-align: center;
-	h2{
+	h2 {
 		font-size: 32px;
 		font-weight: 400;
 		color: #4e525d;
-		@media (min-width:768px) {
+		@media (min-width: 768px) {
 			font-size: 42px;
 		}
 	}
-	.feedback-item p{
+	.feedback-item p {
 		font-size: 14px;
 		color: #4e525d;
 		margin: 0 auto;
-		@media (min-width:576px) {
+		@media (min-width: 576px) {
 			font-size: 16px;
 		}
-		@media (min-width:768px) {
+		@media (min-width: 768px) {
 			width: 650px;
-			font-size: 19px
+			font-size: 19px;
 		}
 	}
-	.feedback-item p ~ p{
+	.feedback-item p ~ p {
 		font-size: 18px;
 		color: #9a8faf;
 		margin-top: 30px;
-		@media (min-width:768px) {
+		@media (min-width: 768px) {
 			font-size: 21px;
 			margin-top: 50px;
 		}
 	}
-	.slider-feedback{
+	.slider-feedback {
 		position: relative;
-		.slick-prev, .slick-next{
+		.slick-prev,
+		.slick-next {
 			background-color: transparent;
 			color: transparent;
 			border: none;
@@ -78,15 +85,15 @@ body {
 			position: absolute;
 			top: 0%;
 		}
-		.slick-prev{
+		.slick-prev {
 			left: 0;
 			z-index: 1;
 		}
-		.slick-next{
+		.slick-next {
 			right: 0;
 		}
-		.slick-prev::before{
-			content: ('');
+		.slick-prev::before {
+			content: ("");
 			display: inline-block;
 			width: 12px;
 			height: 12px;
@@ -94,12 +101,12 @@ body {
 			border-bottom: 1px solid #8c8c8c;
 			transform: rotate(50deg);
 			display: none;
-			@media (min-width:768px) {
+			@media (min-width: 768px) {
 				display: block;
 			}
 		}
-		.slick-next::before{
-		 content: ('');
+		.slick-next::before {
+			content: ("");
 			display: inline-block;
 			width: 12px;
 			height: 12px;
@@ -107,11 +114,12 @@ body {
 			border-bottom: 1px solid #8c8c8c;
 			transform: rotate(-130deg);
 			display: none;
-			@media (min-width:768px) {
+			@media (min-width: 768px) {
 				display: block;
 			}
 		}
-		.slick-prev:active:before, .slick-next:active:before{
+		.slick-prev:active:before,
+		.slick-next:active:before {
 			border-left: 1px solid #49cbcd;
 			border-bottom: 1px solid #49cbcd;
 		}
