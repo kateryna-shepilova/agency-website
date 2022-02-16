@@ -9,7 +9,7 @@
     background-image: url("images/selector.png");
     background-repeat: repeat;
     display: none;
-    cursor: url('https://img.icons8.com/emoji/48/000000/plus-emoji.png');
+    cursor: crosshair;
 }
 .zoom-box .viewer-box{
     position: absolute;
