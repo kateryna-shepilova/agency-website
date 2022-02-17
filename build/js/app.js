@@ -1,14 +1,3 @@
-lightGallery(document.getElementById('lightgallery'));
-
-$(function () {
-	$(".team-img").jqZoom({
-		selectorWidth: 40,
-		selectorHeight: 40,
-		viewerWidth: 300,
-		viewerHeight: 300
-	});
-})
-
 $('.slider-banner').slick();
 $('.slider-feedback').slick();
 
