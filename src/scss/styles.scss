@@ -22,7 +22,10 @@ body {
 	font-weight: 400;
 }
 .main {
-	margin-top: 100px;
+	margin-top: 50px;
+	@media (min-width: 768px) {
+		margin-top: 100px;
+	}
 }
 .container {
 	max-width: 1200px;

@@ -1,12 +1,12 @@
 .service {
 	&__body {
 		display: grid;
-		grid-template-columns: auto auto auto auto;
-		@media (max-width: 767px) {
+		grid-template-columns: auto;
+		@media (min-width: 576px) {
 			grid-template-columns: auto auto;
 		}
-		@media (max-width: 576px) {
-			grid-template-columns: auto;
+		@media (min-width: 768px) {
+			grid-template-columns: auto auto auto auto;
 		}
 	}
 	&__item {
