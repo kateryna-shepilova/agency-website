@@ -316,6 +316,7 @@ a {
 		margin: 20px 0;
 		padding: 10px 30px;
 		color: $white;
+		cursor: pointer;
 		font-size: 13px;
 		font-weight: 700;
 		border: none;
@@ -388,6 +389,7 @@ a {
 		.slick-next {
 			background-color: transparent;
 			color: transparent;
+			cursor: pointer;
 			border: none;
 			height: 25px;
 			width: 25px;
@@ -684,6 +686,7 @@ a {
 	text-align: center;
 	font-size: 22px;
 	color: #fff;
+	cursor: pointer;
 }
 .footer .message-form input[type="submit"]:active {
 	background-color: #788492;
