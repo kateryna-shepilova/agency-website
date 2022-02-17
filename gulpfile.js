@@ -23,35 +23,21 @@ function browsersync() {
 }
 
 function scripts() {
-	src('node_modules/lightgallery.js/dist/js/lightgallery.min.js')
-		.pipe(dest('src/js/'))
-		.pipe(dest('build/js/'))
-	return src([
-		'node_modules/jquery/dist/jquery.min.js',
-		'src/js/app.js',
-	])
+	return src('src/js/app.js')
 		.pipe(dest('src/js/'))
 		.pipe(dest('build/js/'))
 		.pipe(browserSync.stream())
 }
 
 function scriptsBuild() {
-	src('node_modules/lightgallery.js/dist/js/lightgallery.min.js')
-		.pipe(dest('src/js/'))
-		.pipe(dest('build/js/'))
-	return src([
-		'node_modules/jquery/dist/jquery.min.js',
-		'src/js/app.js',
-	])
+	return src(
+		'src/js/app.js')
 		.pipe(concat('app.min.js'))
 		.pipe(uglify())
 		.pipe(dest('build/js/'))
 }
 
 function styles() {
-	src('node_modules/lightgallery.js/dist/css/lightgallery.min.css')
-		.pipe(dest('src/css/'))
-		.pipe(dest('build/css/'))
 	return src('src/scss/**/*.scss')
 		.pipe(sourceMaps.init())
 		.pipe(sass())
@@ -64,9 +50,6 @@ function styles() {
 }
 
 function stylesBuild() {
-	src('node_modules/lightgallery.js/dist/css/lightgallery.min.css')
-		.pipe(dest('src/css/'))
-		.pipe(dest('build/css/'))
 	return src('./src/scss/**/*.scss')
 		.pipe(sass())
 		.pipe(concat('styles.css'))

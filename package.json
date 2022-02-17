@@ -27,8 +27,5 @@
 		"jquery": "^3.6.0",
 		"sass": "^1.49.7",
 		"ttf2woff2": "^4.0.4"
-	},
-	"dependencies": {
-		"lightgallery.js": "^1.4.0"
 	}
 }
