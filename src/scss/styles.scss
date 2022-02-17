@@ -228,10 +228,16 @@ body {
 		background-color: #f8f9fb;
 		text-align: center;
 		margin: 30px 0 0;
+		&:hover > h3{
+			background-color: $blue;
+		}
 		@media (min-width:768px) {
 			width: 33.333%;
 			margin: 0 30px 0 0;
 		}
+	}
+	.premium{
+		margin: 0;
 	}
 	h3{
 		margin: 0;
@@ -239,6 +245,7 @@ body {
 		font-size: 14px;
 		color: $white;
 		font-weight: 400;
+		background-color: $darkblue;
 		@media (min-width:576px) {
 			font-size: 18px;
 			padding: 20px 0;
@@ -247,13 +254,6 @@ body {
 			padding: 25px 0;
 			font-size: 22px;
 		}
-	}
-	.basic h3, .premium h3{
-		background-color: $darkblue;
-		
-	}
-	.pro h3{
-		background-color: $blue;
 	}
 	.price{
 		font-size: 14px;
