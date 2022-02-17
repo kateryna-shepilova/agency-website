@@ -5,10 +5,10 @@ lightGallery(document.getElementById('lightgallery'));
 
 $(function () {
 	$(".team-img").jqZoom({
-		selectorWidth: 10,
-		selectorHeight: 10,
-		viewerWidth: 400,
-		viewerHeight: 400
+		selectorWidth: 40,
+		selectorHeight: 40,
+		viewerWidth: 300,
+		viewerHeight: 300
 	});
 })
 

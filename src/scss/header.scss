@@ -67,12 +67,9 @@
 		display: none;
 	}
 }
-body.lock{
-	overflow: hidden;
-}
-@media (min-width: 767px) {
+@media (max-width: 767px) {
 	body.lock {
-		overflow: auto;
+		overflow: hidden;
 	}
 	.header {
 		&__link {

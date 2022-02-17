@@ -177,10 +177,14 @@ a {
 			}
 			&:last-child{
 				margin-right: 0;
+				.team-photo.zoom-box {
+					.viewer-box{
+						left: -310px!important;
+					}
+				}
 			}
 			.team-photo {
 				border-radius: 50%;
-				overflow: hidden;
 				width: 205px;
 				height: 205px;
 				margin: 0 auto 20px;
@@ -206,9 +210,25 @@ a {
 }
 
 .zoom-box .zoom-selector{
-	@media (min-width: 992px) {
+	@media (min-width: 1200px) {
 		background-image: url("../img/plus.svg");
 		cursor: none;
+	}
+}
+
+.zoom-box .viewer-box{
+    border: 0;
+	z-index: 9999;
+	border-radius: 50%;
+	display: none;
+	img{
+		display: none;
+	}
+	@media (min-width: 1200px) {
+		display: block;
+		img{
+			display: block;
+		}
 	}
 }
 
