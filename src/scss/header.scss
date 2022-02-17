@@ -1,3 +1,6 @@
+body.lock {
+	overflow: hidden;
+}
 .header {
 	position: fixed;
 	width: 100%;
@@ -14,28 +17,14 @@
 		background-color: #fff;
 		z-index: 2;
 	}
-	&__body {
-		height: 100px;
-		position: relative;
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
-	}
-	&__list {
-		list-style: none;
-		margin: 0;
-		padding: 0;
-		display: flex;
-		position: relative;
-		z-index: 2;
-	}
+
 	&__link {
 		position: relative;
 		color: #484c55;
 		text-decoration: none;
-		font-size: 18px;
+		font-size: 25px;
+		padding: 0;
 		transition: all 0.3s ease;
-		padding: 38px 20px;
 		&:hover {
 			background-color: #f8f9fb;
 			color: #49cbcd;
@@ -53,6 +42,82 @@
 		&:hover::before {
 			background-color: #49cbcd;
 		}
+		@media (min-width: 768px) {
+			font-size: 18px;
+			padding: 38px 20px;
+		}
+	}
+	&__burger {
+		display: block;
+		position: relative;
+		width: 30px;
+		height: 20px;
+		z-index: 3;
+		&::before,
+		&::after {
+			content: "";
+			position: absolute;
+			background-color: #484c55;
+			width: 100%;
+			height: 2px;
+			left: 0;
+			transition: all 0.3s ease 0s;
+		}
+		&::before {
+			top: 0;
+		}
+		&::after {
+			bottom: 0;
+		}
+		&.active::before {
+			transform: rotate(45deg);
+			top: 9px;
+		}
+		&.active::after {
+			transform: rotate(-45deg);
+			bottom: 9px;
+		}
+		&.active span {
+			transform: scale(0);
+		}
+		span {
+			position: absolute;
+			background-color: #484c55;
+			left: 0;
+			width: 100%;
+			height: 2px;
+			top: 9px;
+			transition: all 0.3s ease 0s;
+		}
+		@media (min-width: 768px) {
+			display: none;
+		}
+	}
+
+	&__menu {
+		position: fixed;
+		top: -100%;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-color: #49cbcd;
+		padding: 70px 10px 20px 10px;
+		transition: all 0.3s ease 0s;
+		overflow: auto;
+		z-index: 1;
+		&.active {
+			top: 0;
+		}
+	}
+	&__body {
+		height: 50px;
+		position: relative;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		@media (min-width: 768px) {
+			height: 100px;
+		}
 	}
 	&__logo {
 		flex: 0 0 120px;
@@ -62,89 +127,22 @@
 			max-width: 100%;
 			display: block;
 		}
-	}
-	&__burger {
-		display: none;
-	}
-}
-@media (max-width: 768px) {
-	body.lock {
-		overflow: hidden;
-	}
-	.header {
-		&__link {
-			font-size: 25px;
-			padding: 0;
-		}
-		&__burger {
-			display: block;
-			position: relative;
-			width: 30px;
-			height: 20px;
-			z-index: 3;
-			&::before,
-			&::after {
-				content: "";
-				position: absolute;
-				background-color: #484c55;
-				width: 100%;
-				height: 2px;
-				left: 0;
-				transition: all 0.3s ease 0s;
-			}
-			&::before {
-				top: 0;
-			}
-			&::after {
-				bottom: 0;
-			}
-			&.active::before {
-				transform: rotate(45deg);
-				top: 9px;
-			}
-			&.active::after {
-				transform: rotate(-45deg);
-				bottom: 9px;
-			}
-			&.active span {
-				transform: scale(0);
-			}
-			span {
-				position: absolute;
-				background-color: #484c55;
-				left: 0;
-				width: 100%;
-				height: 2px;
-				top: 9px;
-				transition: all 0.3s ease 0s;
-			}
-		}
-
-		&__menu {
-			position: fixed;
-			top: -100%;
-			left: 0;
-			width: 100%;
-			height: 100%;
-			background-color: #49cbcd;
-			padding: 70px 10px 20px 10px;
-			transition: all 0.3s ease 0s;
-			overflow: auto;
-			&.active {
-				top: 0;
-			}
-		}
-		&__body {
-			height: 50px;
-		}
-		&__logo {
+		@media (min-width: 768px) {
 			flex: 0 0 130px;
 		}
-		&__list {
-			display: block;
-			li {
-				margin: 0px 0px 20px 0px;
-			}
+	}
+	&__list {
+		display: block;
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		position: relative;
+		z-index: 2;
+		@media (min-width: 768px) {
+			display: flex;
+		}
+		li {
+			margin: 0px 0px 20px 0px;
 		}
 	}
 }

@@ -1,4 +1,5 @@
 .service {
+	padding: 75px 15px;
 	&__body {
 		display: grid;
 		grid-template-columns: auto;
@@ -65,11 +66,8 @@
 		width: 100%;
 		max-width: 100px;
 		padding: 7px 0px 7px 0px;
-		display: -webkit-box;
-		display: -ms-flexbox;
-		display: flex;
-		justify-content: center;
-		align-items: center;
+		display: inline-block;
+		vertical-align: middle;
 		margin: 0 auto 0;
 		border: none;
 		border-radius: 3px;

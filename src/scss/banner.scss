@@ -1,11 +1,6 @@
 .banner {
-	margin-bottom: 25px;
-
 	text-align: center;
 	color: #fff;
-	@media (min-width: 576px) {
-		margin-bottom: 75px;
-	}
 	&__title {
 		font-size: 45px;
 		font-weight: 600;
@@ -25,19 +20,22 @@
 		}
 	}
 	&__link {
+		width: 100%;
+		max-width: 230px;
+		display: inline-block;
+		vertical-align: middle;
+		padding: 14px 0px 14px 0px;
 		font-size: 20px;
-		padding: 10px 15px 10px 15px;
 		font-weight: 600;
 		text-decoration: none;
 		text-transform: capitalize;
 		border: 3px solid #fff;
 		border-radius: 8px;
-
 		color: #fff;
 		transition: all 0.3s ease;
 		@media (min-width: 768px) {
 			font-size: 26px;
-			padding: 14px 40px 14px 40px;
+			padding: 20.5px 0px 20.5px 0px;
 		}
 		&:hover {
 			background-color: #fff;
@@ -46,19 +44,18 @@
 	}
 }
 .slider {
+	position: relative;
+	width: 100vw;
+	top: 0;
+	left: 50%;
+	transform: translateX(-50%);
 	&__item {
-		width: 100%;
-		min-height: 566px;
-		background-image: url(../img/banner.jpg);
 		background-size: cover;
-		background-position: center center;
+		background-position: 50% 50%;
 		background-repeat: no-repeat;
-		img {
-			width: 100%;
-		}
 	}
 	&__content {
-		padding: 140px 0px 0px 0px;
+		padding: 140px 0px 140px 0px;
 	}
 }
 .banner .slick-prev.slick-arrow {
@@ -129,18 +126,14 @@
 	}
 }
 .banner .slick-next.slick-arrow {
-	@media (min-width: 320px) {
-		display: none;
-	}
+	display: none;
 	@media (min-width: 768px) {
 		display: block;
 	}
 }
 
 .banner .slick-prev.slick-arrow {
-	@media (min-width: 320px) {
-		display: none;
-	}
+	display: none;
 	@media (min-width: 768px) {
 		display: block;
 	}
