@@ -1,5 +1,8 @@
 body.lock {
 	overflow: hidden;
+	@media (min-width: 768px) {
+		overflow: visible;
+	}
 }
 .header {
 	position: fixed;
