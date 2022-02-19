@@ -1,6 +1,6 @@
 .service {
 	padding: 75px 15px;
-	&__body {
+	&-body {
 		display: grid;
 		grid-template-columns: auto;
 		@media (min-width: 576px) {
@@ -10,41 +10,41 @@
 			grid-template-columns: auto auto auto auto;
 		}
 	}
-	&__item {
+	&-item {
 		margin: 25px;
 		text-align: center;
-		&:nth-child(1) .service__image::before {
+		&:nth-child(1) .service-image::before {
 			background-image: url(../img/rocket.png);
 			width: 37px;
 			height: 37px;
 		}
-		&:nth-child(2) .service__image::before {
+		&:nth-child(2) .service-image::before {
 			background-image: url(../img/pc.png);
 			width: 38px;
 			height: 33px;
 		}
-		&:nth-child(3) .service__image::before {
+		&:nth-child(3) .service-image::before {
 			background-image: url(../img/bulb.png);
 			width: 26px;
 			height: 40px;
 		}
-		&:nth-child(4) .service__image::before {
+		&:nth-child(4) .service-image::before {
 			background-image: url(../img/mobile.png);
 			width: 27px;
 			height: 33px;
 		}
 	}
-	&__title {
+	&-title {
 		font-size: 22px;
 		text-transform: capitalize;
 		color: #4e525d;
 	}
-	&__text {
+	&-text {
 		font-size: 14px;
 		color: #4e525d;
 		margin-bottom: 30px;
 	}
-	&__image {
+	&-image {
 		position: relative;
 		width: 100px;
 		height: 100px;
@@ -63,7 +63,7 @@
 		}
 	}
 	.btn-service {
-		padding:  7px 12px;
+		padding: 7px 12px;
 		font-size: 14px;
 		text-transform: capitalize;
 		font-weight: 400;

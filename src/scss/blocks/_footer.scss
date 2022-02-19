@@ -9,16 +9,12 @@
 	@media (min-width: 992px) {
 		padding: 100px 0;
 	}
-	h2 {
+	&-title {
 		margin: 0;
 		text-align: center;
-		font-size: 32px;
-		font-weight: 400;
 		color: #fff;
-		@media (min-width: 768px) {
-			font-size: 42px;
-		}
 	}
+
 	.footer-content {
 		margin: 40px 0 0;
 		@media (min-width: 768px) {
@@ -32,8 +28,8 @@
 			-ms-flex-pack: justify;
 			justify-content: space-between;
 		}
-		.contact-us{
-			p{
+		.contact-us {
+			p {
 				font-size: 24px;
 				margin: 20px 0 0;
 				padding: 0;
@@ -208,6 +204,6 @@
 @media (min-width: 992px) {
 	.footer .message-form input[type="submit"] {
 		margin: 30px 0 0;
-		padding: 10px 50px;;
+		padding: 10px 50px;
 	}
 }

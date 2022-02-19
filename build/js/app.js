@@ -2,8 +2,8 @@ $('.slider-banner').slick();
 $('.slider-feedback').slick();
 
 $(document).ready(function () {
-	$(".header__burger").click(function (event) {
-		$(".header__burger, .header__menu").toggleClass("active");
+	$(".header-burger").click(function (event) {
+		$(".header-burger, .header-menu").toggleClass("active");
 		$("body").toggleClass("lock");
 	});
 });

@@ -1,7 +1,7 @@
 .banner {
 	text-align: center;
 	color: #fff;
-	&__title {
+	&-title {
 		font-size: 45px;
 		font-weight: 600;
 		margin: 0px 0px 25px 0px;
@@ -9,7 +9,7 @@
 			font-size: 63px;
 		}
 	}
-	&__text {
+	&-text {
 		font-size: 17px;
 		margin: 0 auto 40px;
 		width: 100%;
@@ -19,14 +19,14 @@
 			margin: 0 auto 80px;
 		}
 	}
-	.btn-banner{
-  			text-transform: capitalize;
-  			background-color: transparent;
-			border: 2px solid #fff;
-  		@media (min-width: 768px) {
+	.btn-banner {
+		text-transform: capitalize;
+		background-color: transparent;
+		border: 2px solid #fff;
+		@media (min-width: 768px) {
 			border: 3px solid #fff;
 		}
-   	&:hover {
+		&:hover {
 			background-color: #fff;
 			color: #484c55;
 		}
@@ -38,12 +38,12 @@
 	top: 0;
 	left: 50%;
 	transform: translateX(-50%);
-	&__item {
+	&-item {
 		background-size: cover;
 		background-position: 50% 50%;
 		background-repeat: no-repeat;
 	}
-	&__content {
+	&-content {
 		padding: 140px 0px 140px 0px;
 	}
 }

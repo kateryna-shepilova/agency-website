@@ -36,8 +36,12 @@ a {
 }
 
 .title {
-	font-size: 42px;
+	font-size: 32px;
 	color: #485460;
+	font-weight: 400;
+	@media (min-width: 768px) {
+		font-size: 42px;
+	}
 }
 
 .btn {
