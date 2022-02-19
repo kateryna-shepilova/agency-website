@@ -1,0 +1,239 @@
+.footer {
+	padding: 50px 0;
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	@media (min-width: 768px) {
+		padding: 80px 0;
+	}
+	@media (min-width: 992px) {
+		padding: 100px 0;
+	}
+	h2 {
+		margin: 0;
+		text-align: center;
+		font-size: 32px;
+		font-weight: 400;
+		color: #fff;
+		@media (min-width: 768px) {
+			font-size: 42px;
+		}
+	}
+	.footer-content {
+		margin: 60px 0 0;
+		@media (min-width: 768px) {
+			margin: 80px 0 0;
+		}
+		@media (min-width: 992px) {
+			margin: 120px 0 0;
+			display: flex;
+			-webkit-box-pack: justify;
+			-ms-flex-pack: justify;
+			justify-content: space-between;
+		}
+		.contact-us{
+			p{
+				font-size: 24px;
+				margin: 0;
+				padding: 0;
+				color: #fff;
+				text-align: center;
+				@media (min-width: 992px) {
+					text-align: start;
+				}
+			}
+		}
+		.social-icons {
+			display: flex;
+			margin: 45px 0 0;
+			-webkit-box-pack: center;
+			-ms-flex-pack: center;
+			justify-content: center;
+			@media (min-width: 992px) {
+				-webkit-box-pack: start;
+				-ms-flex-pack: start;
+				justify-content: start;
+			}
+			li {
+				width: 42px;
+				height: 42px;
+				margin: 0 15px 0 0;
+				border-radius: 50%;
+				img {
+					object-fit: none;
+				}
+			}
+			.facebook {
+				background-color: #3b5997;
+			}
+			.facebook:hover {
+				background-color: #788492;
+			}
+			.twitter {
+				background-color: #3ec2f3;
+			}
+			.twitter:hover {
+				background-color: #788492;
+			}
+			.google {
+				background-color: #e44c41;
+			}
+			.google:hover {
+				background-color: #788492;
+			}
+		}
+	}
+}
+
+.footer .footer-content .contact-us p ~ p {
+	font-size: 14px;
+	min-width: 95%;
+	color: rgba(255, 255, 255, 0.5);
+	margin: 20px 0 0;
+}
+@media (min-width: 992px) {
+	.footer .footer-content .contact-us p ~ p {
+		width: 430px;
+	}
+}
+
+.footer .footer-content .contacts {
+	margin: 25px 0 0;
+	text-align: center;
+}
+.footer .footer-content .contacts li {
+	margin: 0 0 15px 0;
+}
+.footer .footer-content .contacts li a {
+	font-size: 14px;
+	font-weight: 400;
+	color: #bface2;
+}
+.footer .footer-content .contacts li a:hover {
+	color: #fff;
+}
+@media (min-width: 992px) {
+	.footer .footer-content .contacts {
+		text-align: start;
+	}
+}
+.footer .message-form {
+	margin: 50px 0 0;
+	text-align: center;
+}
+@media (min-width: 992px) {
+	.footer .message-form {
+		text-align: end;
+		margin: 0 0 0 160px;
+	}
+}
+.footer .message-form input[type="text"],
+.footer .message-form input[type="email"] {
+	display: inline-block;
+	padding: 15px 20px;
+	width: 100%;
+	height: 44px;
+	font-size: 16px;
+	color: #c1c1c1;
+	background-color: #fff;
+	border: 2px solid #fff;
+	border-radius: 5px;
+}
+.footer .message-form input[type="text"]:focus,
+.footer .message-form input[type="email"]:focus {
+	outline: none;
+	border: 2px solid #49cbcd;
+}
+@media (min-width: 768px) {
+	.footer .message-form input[type="text"],
+	.footer .message-form input[type="email"] {
+		width: 45%;
+	}
+}
+@media (min-width: 1200px) {
+	.footer .message-form input[type="text"],
+	.footer .message-form input[type="email"] {
+		width: 270px;
+	}
+}
+.footer .message-form input[type="email"] {
+	margin: 15px 0 0;
+}
+@media (min-width: 768px) {
+	.footer .message-form input[type="email"] {
+		margin: 0 0 0 60px;
+	}
+}
+@media (min-width: 992px) {
+	.footer .message-form input[type="email"] {
+		margin: 0 0 0 30px;
+	}
+}
+@media (min-width: 1100px) {
+	.footer .message-form input[type="email"] {
+		margin: 0 0 0 45px;
+	}
+}
+@media (min-width: 1200px) {
+	.footer .message-form input[type="email"] {
+		margin: 0 0 0 30px;
+	}
+}
+.footer .message-form textarea[name="message"] {
+	display: block;
+	margin: 15px 0 0;
+	padding: 15px 20px;
+	width: 100%;
+	height: 179px;
+	font-size: 16px;
+	color: #c1c1c1;
+	border: 2px solid #fff;
+	border-radius: 5px;
+	resize: none;
+}
+.footer .message-form textarea[name="message"]:focus {
+	outline: none;
+	border: 2px solid #49cbcd;
+}
+@media (min-width: 992px) {
+	.footer .message-form textarea[name="message"] {
+		margin: 30px 0 0;
+	}
+}
+.footer .message-form input[type="submit"] {
+	background-color: #49cbcd;
+	width: 100px;
+	padding: 10px 0;
+	margin: 15px 0 0;
+	border: none;
+	border-radius: 5px;
+	text-align: center;
+	font-size: 22px;
+	color: #fff;
+	cursor: pointer;
+}
+.footer .message-form input[type="submit"]:active {
+	background-color: #788492;
+	outline: none;
+}
+@media (min-width: 768px) {
+	.footer .message-form input[type="submit"] {
+		transition: all 0.3s ease-out;
+	}
+	.footer .message-form input[type="submit"] {
+		width: 130px;
+	}
+	.footer .message-form input[type="submit"]:hover {
+		background-color: #788492;
+	}
+	.footer .message-form input[type="submit"]:active {
+		background-color: #49cbcd;
+	}
+}
+@media (min-width: 992px) {
+	.footer .message-form input[type="submit"] {
+		margin: 30px 0 0;
+		width: 170px;
+		padding: 15px 0;
+	}
+}

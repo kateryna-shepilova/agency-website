@@ -16,61 +16,55 @@ const del = require('del');
 
 function browsersync() {
 	browserSync.init({
-		server: { baseDir: './src/' },
+		server: { baseDir: './build/' },
 		notify: false,
 		online: true
 	})
 }
 
 function scripts() {
-	return src('src/js/app.js')
-		.pipe(dest('src/js/'))
-		.pipe(dest('build/js/'))
+	return src('./src/js/app.js')
+		.pipe(dest('./build/js/'))
 		.pipe(browserSync.stream())
 }
 
 function scriptsBuild() {
-	return src(
-		'src/js/app.js')
+	return src('./src/js/app.js')
 		.pipe(concat('app.min.js'))
 		.pipe(uglify())
-		.pipe(dest('build/js/'))
+		.pipe(dest('./build/js/'))
 }
 
 function styles() {
-	return src('src/scss/**/*.scss')
+	return src('./src/scss/**/*.scss')
 		.pipe(sourceMaps.init())
 		.pipe(sass())
-		.pipe(concat('styles.css'))
 		.pipe(autoprefixer({ overrideBrowserslist: ['last 10 versions'], grid: true }))
 		.pipe(sourceMaps.write())
-		.pipe(dest('src/css/'))
-		.pipe(dest('build/css/'))
+		.pipe(dest('./build/css/'))
 		.pipe(browserSync.stream())
 }
 
 function stylesBuild() {
 	return src('./src/scss/**/*.scss')
 		.pipe(sass())
-		.pipe(concat('styles.css'))
 		.pipe(groupMedia())
 		.pipe(autoprefixer({ overrideBrowserslist: ['last 10 versions'], grid: true }))
 		.pipe(cleancss(({ level: { 1: { specialComments: 0 } } /*, format: 'beautify'*/ })))
-		.pipe(dest('src/css/'))
-		.pipe(dest('build/css/'))
+		.pipe(dest('./build/css/'))
 }
 
-function imgToApp() {
+function imgToBuild() {
 	return src(['./src/img/**/*.jpg', './src/img/**/*.png', './src/img/**/*.jpeg', './src/img/**/*.svg'])
-		.pipe(dest('build/img'))
+		.pipe(dest('./build/img/'))
 }
 
 function imageMin() {
 	src('./src/img/**/*.svg')
-		.pipe(dest('build/img'))
+		.pipe(dest('./build/img'))
 	return src(['./src/img/**/*.jpg', './src/img/**/*.png', './src/img/**/*.jpeg'])
 		.pipe(imagemin())
-		.pipe(dest('build/img'))
+		.pipe(dest('./build/img/'))
 }
 
 function htmlInclude() {
@@ -81,9 +75,9 @@ function htmlInclude() {
 }
 
 function fonts() {
-	src('src/fonts/**/*')
+	src('./src/fonts/**/*')
 		.pipe(ttf2woff())
-		.pipe(dest('build/fonts/'));
+		.pipe(dest('./build/fonts/'));
 
 	return src('src/fonts/**/*')
 		.pipe(ttf2woff2())
@@ -91,33 +85,31 @@ function fonts() {
 }
 
 function clean() {
-	return del('build/**/*', { force: true })
+	return del('./build/**/*', { force: true })
 }
 
 function startwatch() {
 	browsersync();
 	watch('./src/scss/**/*.scss', styles);
-	watch('./src/img/**/*.jpg', imgToApp);
-	watch('./src/img/**/*.png', imgToApp);
-	watch('./src/img/**/*.jpeg', imgToApp);
-	watch('./src/img/**/*.svg', imgToApp);
+	watch('./src/img/**/*.jpg', imgToBuild);
+	watch('./src/img/**/*.png', imgToBuild);
+	watch('./src/img/**/*.jpeg', imgToBuild);
+	watch('./src/img/**/*.svg', imgToBuild);
 	watch('./src/fonts/**/*.ttf', fonts);
 	watch('./src/js/**/*.js', scripts);
 	watch('./src/**/*.html', htmlInclude);
 }
 
-
-// exports.html = html;
 exports.browsersync = browsersync;
 exports.startwatch = startwatch;
 exports.scripts = scripts;
 exports.styles = styles;
 exports.stylesBuild = stylesBuild;
 exports.fonts = fonts;
-exports.imgToApp = imgToApp;
+exports.imgToBuild = imgToBuild;
 exports.imageMin = imageMin;
 exports.htmlInclude = htmlInclude;
 
-exports.default = series(clean, parallel(htmlInclude, styles, scripts, fonts, imgToApp), startwatch, browsersync);
-exports.build = series(clean, parallel(htmlInclude, scriptsBuild, fonts, imgToApp), stylesBuild, imageMin);
+exports.default = series(clean, parallel(htmlInclude, styles, scripts, fonts, imgToBuild), startwatch, browsersync);
+exports.build = series(clean, parallel(htmlInclude, stylesBuild, scriptsBuild, fonts), imageMin);
 
